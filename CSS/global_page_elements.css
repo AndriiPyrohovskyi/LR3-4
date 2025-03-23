@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+body {
+    display: grid;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    grid-template-rows: 100px 1fr 600px;
+}
+
+.content {
+    grid-row: 2;
+    background-color: rgb(250, 250, 250);
+    min-height: 100vh;
+}
+
+.carousel {
+    display: grid;
+    grid-template-columns: 40px repeat(6, 1fr) 40px;
+    gap: 5px;
+    height: 70%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+.carousel_item {
+    grid-column: auto;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+    max-width: 300px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.carousel_item .product_image {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.carousel_item .tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.carousel_item .tag {
+    padding: 4px 8px;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #eee;
+    color: #555;
+    font-weight: 500;
+}
+
+.carousel_item .tag.best-seller {
+    background-color: #ffd700;
+    color: #000;
+}
+
+.carousel_item .tag.new {
+    background-color: #e0f7fa;
+    color: #00796b;
+}
+
+.carousel_item .sku {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #999;
+}
+
+.carousel_item .product_name {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0;
+    color: #222;
+}
+
+.carousel_item .price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e53935;
+    margin: auto 0 0;
+}
+
+.carousel_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.carousel_btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 50%;
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    transition: background-color 0.2s ease;
+}
+
+.carousel_btn a:hover {
+    background-color: #f0f0f0;
+}

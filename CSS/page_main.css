@@ -1,0 +1,120 @@
+.main_page{
+    display: grid;
+    grid-template-rows: 600px repeat(3, 700px) 200px 300px 300px;
+    gap: 10px;
+}
+.banners{
+    padding: 30px;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.big_banner{
+    grid-column: 1;
+    border-radius: 40px;
+    background-color: rgb(255, 231, 148);
+    margin-right: 20px;
+}
+.small_banners{
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+.small_banner{
+    grid-column: auto;
+    background-color: #ff6666;
+    border-radius: 30px;
+}
+.bestsellers {
+    padding-left: 30px;
+    padding-right: 30px;
+    grid-row: auto;
+}
+.bestsellers h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 35px;
+}
+.recommendations {
+    padding-left: 30px;
+    padding-right: 30px;
+    grid-row: auto;
+}
+.recommendations h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 35px;
+}
+.novelty {
+    padding-left: 30px;
+    padding-right: 30px;
+    grid-row: auto;
+}
+.novelty h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 35px;
+}
+.brands {
+    padding-left: 30px;
+    padding-right: 30px;
+    grid-row: auto;
+    display: grid;
+    grid-template-rows: 70px 1fr;
+}
+.brands h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 35px;
+}
+.brands_container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    margin-bottom: 50px;
+    background-color: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+}
+.brands_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.brands_item img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.benefits {
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    grid-row: auto;
+    display: grid;
+    grid-template-rows: 70px 1fr;
+}
+.benefits h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 35px;
+}
+.benefits_container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+.benefits_item {
+    grid-column: auto;
+    background-color: rgb(255, 206, 35);
+}
+.about_us {
+    grid-row: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: block;
+}
+.about_us h1 {
+    font-size: 45px;
+}
+.about_us .paragraph p {
+    font-size: 24px;
+}
+.about_us h2 {
+    font-size: 28px;
+}

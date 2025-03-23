@@ -1,0 +1,55 @@
+.header {
+    background-color: rgb(255, 209, 55);
+    padding: 20px;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 280px 1500px 1fr;
+}
+
+.header .links{
+    margin-left: 20px;
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+}
+.header .logo {
+    background-image: url("/LR3-4/res/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    width: 240px;
+    height: 60px;
+}
+
+.header .instruments{
+    gap: 40px;
+    grid-column: 3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.header .instruments i {
+    font-size: 40px;
+}
+.header .instruments a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.header .instruments .fav:hover {
+    color: #c80000;
+}
+.header .instruments .cart:hover {
+    color: #098d00;
+}
+.header .links a{
+    color: #000000;
+    padding: 0 20px;
+    font-size: 28px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.header .links a:hover {
+    color: #5c0799;
+}

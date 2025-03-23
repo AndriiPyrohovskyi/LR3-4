@@ -1,0 +1,72 @@
+.footer {
+    grid-row: 3;
+    background-color: #2a1253;
+    display: grid;
+    grid-template-columns: 600px repeat(3, 1fr);
+}
+.footer .footer_company_container {
+    padding: 30px;
+    display: grid;
+    grid-template-rows: 150px 1fr;
+}
+.footer .footer_company_container .logo {
+    grid-row: 1;
+    background-image: url("/LR3-4/res/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    width: 540px;
+    height: 150px;
+}
+.footer .footer_company_container .slogan {
+    padding-top: 20px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    font-style: oblique;
+    grid-row: 2;
+}
+.footer .footer_company_container .rights {
+    padding-top: 20px;
+    font-size: 24px;
+    color: rgb(181, 181, 181);
+}
+.footer .footer_link_container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer .footer_link_container h1{
+    font-size: 36px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 5px;
+}
+.footer i{
+    color: rgba(255, 255, 255);
+    font-size: 36px;
+}
+.footer a{
+    color: rgb(210, 210, 210);
+    font-size: 24px;
+    text-decoration: none;
+}
+.footer .phones {
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer .footer_link_container > .phones,
+.footer .contact_row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 5px 0;
+}
+.footer .footer_link_container .phone_numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 5px 0;
+}

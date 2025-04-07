@@ -18,37 +18,37 @@ body {
 }
 
 .carousel_item {
-    flex: 0 0 33.33%; /* Для 3 айтемів у видимій області */
+    flex: 0 0 20%; 
     box-sizing: border-box;
     padding: 10px;
     text-align: center;
-    background-color: #ffffff; /* Білий фон айтема */
-    border: 1px solid #ddd; /* Сірий бордер */
-    border-radius: 10px; /* Радіус бордера */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легка тінь */
-    position: relative; /* Для позиціонування кнопок */
+    background-color: #ffffff; 
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    position: relative; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .carousel_item:hover {
-    transform: translateY(-5px); /* Піднімаємо айтем при наведенні */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Збільшуємо тінь при наведенні */
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 .carousel_item img {
     width: 100%;
-    height: auto;
-    border-radius: 8px; /* Радіус для зображення */
+    max-height: 350px;
+    border-radius: 8px;
 }
 
 .item-buttons {
     position: absolute;
-    bottom: -40px; /* Початково кнопки під айтемом */
+    bottom: -40px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
-    opacity: 0; /* Приховуємо кнопки */
+    opacity: 0; 
     transition: opacity 0.3s ease, bottom 0.3s ease;
 }
 
@@ -69,8 +69,8 @@ body {
 }
 
 .carousel_item:hover .item-buttons {
-    opacity: 1; /* Показуємо кнопки при наведенні */
-    bottom: -10px; /* Піднімаємо кнопки ближче до айтема */
+    opacity: 1; 
+    bottom: -10px; 
 }
 
 .carousel-btns {
@@ -113,17 +113,17 @@ body {
     font-size: 12px;
     font-weight: bold;
     color: white;
-    border-radius: 15px; /* Закруглені краї */
-    border: 1px solid transparent; /* Початкова обводка */
+    border-radius: 15px;
+    border: 1px solid transparent; 
     text-transform: uppercase;
 }
 
 .tag.best-seller {
-    background-color: #ff9800; /* Помаранчевий фон для "Лідер продаж" */
-    border-color: #e68900; /* Обводка */
+    background-color: #ff9800;
+    border-color: #e68900;
 }
 
 .tag.new {
-    background-color: #4caf50; /* Зелений фон для "Новинка" */
-    border-color: #3e8e41; /* Обводка */
+    background-color: #4caf50;
+    border-color: #3e8e41;
 }

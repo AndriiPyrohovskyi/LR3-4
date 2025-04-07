@@ -26,11 +26,13 @@ async function fetchProducts() {
     const response = await fetch('data/products.json');
     const allProducts = await response.json();
 
-    // Розподіл продуктів між каруселями
-    carousels[0].products = allProducts.slice(0, 10); // Бестселери
-    carousels[1].products = allProducts.slice(0, 10); // Рекомендації
-    carousels[2].products = allProducts.slice(0, 10); // Новинки
-
+    function getRandomItems(array, count) {
+        const shuffled = array.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, count);
+    }
+    carousels[0].products = getRandomItems(allProducts, 10);
+    carousels[1].products = getRandomItems(allProducts, 10);
+    carousels[2].products = getRandomItems(allProducts, 10);
     carousels.forEach(renderProducts);
 }
 
@@ -65,20 +67,19 @@ function renderProducts(carousel) {
 function updateCarousel(carousel) {
     const { container, currentIndex } = carousel;
     const items = container.querySelectorAll('.carousel_item');
-    const visibleItems = 5; // Кількість видимих айтемів
+    const visibleItems = 5;
 
-    // Встановлюємо ширину контейнера для горизонтального скролу
     container.style.display = 'flex';
     container.style.transition = 'transform 0.3s ease-in-out';
     container.style.transform = `translateX(-${currentIndex * (100 / visibleItems)}%)`;
 
     items.forEach((item) => {
-        item.style.flex = `0 0 ${100 / visibleItems}%`; // Ширина айтема
+        item.style.flex = `0 0 ${100 / visibleItems}%`;
     });
 }
 
 function showNext(carousel) {
-    const visibleItems = 3;
+    const visibleItems = 5;
     const maxIndex = carousel.products.length - visibleItems;
     carousel.currentIndex = Math.min(carousel.currentIndex + 1, maxIndex);
     updateCarousel(carousel);
@@ -91,15 +92,15 @@ function showPrev(carousel) {
 
 function isAuthenticated() {
     const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-    return currentUser !== null; // Повертає true, якщо користувач авторизований
+    return currentUser !== null;
 }
 
 function getCurrentUser() {
-    return JSON.parse(sessionStorage.getItem('currentUser')); // Отримуємо поточного користувача
+    return JSON.parse(sessionStorage.getItem('currentUser'));
 }
 
 function saveCurrentUser(user) {
-    sessionStorage.setItem('currentUser', JSON.stringify(user)); // Зберігаємо користувача в sessionStorage
+    sessionStorage.setItem('currentUser', JSON.stringify(user));
 }
 
 async function addToCart(productId) {
@@ -114,7 +115,7 @@ async function addToCart(productId) {
         const response = await fetch(`/api/users/${currentUser.username}/cart`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ productId, quantity: 1 }), // Передаємо productId і quantity
+            body: JSON.stringify({ productId, quantity: 1 }),
         });
 
         if (response.ok) {
@@ -156,7 +157,7 @@ async function addToFavorites(productId) {
 
 document.addEventListener('click', (event) => {
     if (event.target.classList.contains('favorite-btn') || event.target.classList.contains('cart-btn')) {
-        const currentUser = getCurrentUser(); // Отримуємо авторизованого користувача
+        const currentUser = getCurrentUser();
         if (!currentUser) {
             alert('Ви повинні увійти в систему, щоб додати товар!');
             window.location.href = '/auth.html';

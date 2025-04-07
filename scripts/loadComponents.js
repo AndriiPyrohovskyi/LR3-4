@@ -18,10 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="user-menu">
                         <button class="user-name">${currentUser.username}</button>
                         <div class="dropdown-menu">
+                            <button id="order-history-btn">Переглянути історію замовлень</button>
                             <button id="logout-btn">Вийти</button>
                         </div>
                     </div>
                 `;
+                const orderHistoryButton = document.querySelector('#order-history-btn');
+                orderHistoryButton.addEventListener('click', () => {
+                    window.location.href = '/pages/other/orderhistory.html';
+                });
+
                 const logoutButton = document.querySelector('#logout-btn');
                 logoutButton.addEventListener('click', () => {
                     sessionStorage.removeItem('currentUser');
@@ -29,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         } else {
-            // Додаємо обробник події для кнопки авторизації
             const loginButton = document.querySelector('#login-btn');
             if (loginButton) {
                 loginButton.addEventListener('click', () => {

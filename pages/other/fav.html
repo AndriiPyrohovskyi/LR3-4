@@ -1,99 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sexofon</title>
-  <link rel="stylesheet" href="/CSS/global_page_elements.css">
-  <link rel="stylesheet" href="/CSS/header.css">
-  <link rel="stylesheet" href="/CSS/footer.css">
-  <link rel="stylesheet" href="/CSS/page_main.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="/scripts/loadStyles.js"></script>
+  <link rel="stylesheet" href="/CSS/cart_fav_items.css">
 </head>
+
 <body>
-<div class="header">
-  <a href="/LR3-4/main.html" class="logo"></a>
-  <div class="links">
-    <a href="/LR3-4/pages/catalog/catalog.html">Каталог</a>
-    <a href="/LR3-4/pages/about_us/about_us.html">Про нас</a>
-    <a href="/LR3-4/pages/delivery_and_payment/delivery_and_payment.html">Доставка та оплата</a>
-    <a href="/LR3-4/pages/exchange_and_warranty/exchange_and_warranty.html">Обмін та гарантія</a>
-    <a href="/LR3-4/pages/contacts/contacts.html">Контакти</a>
+  <div class="header"></div>
+  <div class="content">
+    <h1>Улюблене</h1>
+    <div id="favorites"></div>
   </div>
-  <div class="instruments">
-    <a href="/LR3-4/pages/other/fav.html" class="fav"><i class="fas fa-heart"></i></a>
-    <a href="/LR3-4/pages/other/cart.html" class="cart"><i class="fas fa-cart-shopping"></i></a>
-  </div>
-</div>
-<div class="content">
-
-</div>
-<div class="footer">
-  <div class="footer_company_container">
-    <div class="logo">
-
-    </div>
-    <div class="slogan">
-      "Не бий мене по губі, бо я граю на трубі..."
-    </div>
-    <div class="rights">
-      © Всі права захищені «Sexofon» 2025
-    </div>
-  </div>
-  <div class="footer_link_container">
-    <h1>Каталог</h1>
-    <a href="/LR3-4/pages/catalog/acoustic_systems/acoustic_systems.html">Акустичні системи</a>
-    <a href="/LR3-4/pages/catalog/keyboard_instruments/keyboard_instruments.html">Клавішні інструменти</a>
-    <a href="/LR3-4/pages/catalog/musical_equipment/musical_equipment.html">Музичне обладнання</a>
-    <a href="/LR3-4/pages/catalog/guitars_and_equipment/guitars_and_equipment.html">Гітари та обладнання</a>
-    <a href="/LR3-4/pages/catalog/percussion_instruments/percussion_instruments.html">Ударні інструменти</a>
-    <a href="/LR3-4/pages/catalog/DJ_equipment/DJ_equipment.html">DJ обладнання</a>
-    <a href="/LR3-4/pages/catalog/wind_instruments/wind_instruments.html">Духові інструменти</a>
-    <a href="/LR3-4/pages/catalog/Hi-Fi_and_Hi-End_equipment/Hi-Fi_and_Hi-End_equipment.html">Hi-Fi и Hi-End техніка</a>
-    <a href="/LR3-4/pages/catalog/home_audio/home_audio.html">Домашнє аудіо</a>
-  </div>
-  <div class="footer_link_container">
-    <h1>Клієнтам</h1>
-    <a href="/LR3-4/pages/catalog/catalog.html">Каталог</a>
-    <a href="/LR3-4/pages/about_us/about_us.html">Про нас</a>
-    <a href="/LR3-4/pages/delivery_and_payment/delivery_and_payment.html">Доставка та оплата</a>
-    <a href="/LR3-4/pages/exchange_and_warranty/exchange_and_warranty.html">Обмін та гарантія</a>
-    <a href="/LR3-4/pages/contacts/contacts.html">Контакти</a>
-    <a href="/LR3-4/pages/other/map.html">Мапа сайту</a>
-    <a href="/LR3-4/pages/other/creditnails.html">Кредитування</a>
-  </div>
-  <div class="footer_link_container">
-    <h1>Контакти</h1>
-    <div class="phones">
-      <i class="fas fa-phone"></i>
-      <div class="phone_numbers">
-        <a href="tel:+380983741340">+380983741340</a>
-        <a href="tel:+380983741340">+380983741340</a>
-        <a href="tel:+380983741340">+380983741340</a>
-        <a href="tel:+380983741340">+380983741340</a>
-      </div>
-    </div>
-    <div class="telegram contact_row">
-      <i class="fab fa-telegram"></i>
-      <a href="https://t.me/+380983741340">Telegram</a>
-    </div>
-    <div class="instagram contact_row">
-      <i class="fab fa-instagram"></i>
-      <a href="https://www.instagram.com/pp_pp6571/">Instagram</a>
-    </div>
-    <div class="email contact_row">
-      <i class="fas fa-envelope"></i>
-      <a href="mailto:info@sexofon.com.ua">info@sexofon.com.ua</a>
-    </div>
-    <div class="address contact_row">
-      <i class="fas fa-map-marker-alt"></i>
-      <a href="https://www.google.com.ua/maps/place/Гуртожиток+Хмельницького+політехнічного+коледжу/@49.4342998,27.0053529,123m/data=!3m1!1e3!4m15!1m8!3m7!1s0x47320700a5fcd079:0xf06e6401f5778b9d!2z0YPQuy4g0JfQsNGA0LXRh9C10L3RgdC60LDRjywg0KXQvNC10LvRjNC90LjRhtC60LjQuSwg0KXQvNC10LvRjNC90LjRhtC60LDRjyDQvtCx0LvQsNGB0YLRjCwgMjkwMDA!3b1!8m2!3d49.4333611!4d26.9966101!16s%2Fg%2F1tfqpqkp!3m5!1s0x47320702f56fe8e9:0x398085dbde413dea!8m2!3d49.434448!4d27.0053739!16s%2Fg%2F11gtz1jr_9?hl=ru&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoASAFQAw%3D%3D">
-        Хмельницький, вул. Зарічанська 10/4 (Колл-центр) "Sexofon" - магазин музичних інструментів
-      </a>
-    </div>
-  </div>
-</div>
+  <div class="footer"></div>
+  <script src="/scripts/loadComponents.js"></script>
+  <script src="/scripts/favorites.js"></script>
 </body>
+
 </html>

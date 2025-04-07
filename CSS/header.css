@@ -3,7 +3,7 @@
     padding: 20px;
     grid-row: 1;
     display: grid;
-    grid-template-columns: 280px 1500px 1fr;
+    grid-template-columns: 240px 1500px 1fr;
 }
 
 .header .links{
@@ -13,7 +13,7 @@
     align-items: center;
 }
 .header .logo {
-    background-image: url("/LR3-4/res/logo.png");
+    background-image: url("../res/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -52,4 +52,64 @@
 }
 .header .links a:hover {
     color: #5c0799;
+}
+.auth-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.auth-btn:hover {
+    background-color: #0056b3;
+}
+
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.user-name {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-name:hover {
+    background-color: #0056b3;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.dropdown-menu button {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+    background-color: #f4f4f4;
+}
+
+.user-menu:hover .dropdown-menu {
+    display: block;
 }

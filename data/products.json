@@ -1,0 +1,82 @@
+[
+    {
+        "id": "1",
+        "name": "Електрогітара Fender Stratocaster",
+        "price": "₴18 500",
+        "image": "/res/img/muz001.png",
+        "tags": ["Лідер продаж", "Новинка"],
+        "sku": "MUZ-001"
+    },
+    {
+        "id": "2",
+        "name": "Акустична гітара Yamaha F310",
+        "price": "₴7 200",
+        "image": "/res/img/muz001.png",
+        "tags": ["Лідер продаж"],
+        "sku": "MUZ-002"
+    },
+    {
+        "id": "3",
+        "name": "Саксофон Yamaha YAS-280",
+        "price": "₴25 000",
+        "image": "/res/img/muz001.png",
+        "tags": ["Новинка"],
+        "sku": "MUZ-003"
+    },
+    {
+        "id": "4",
+        "name": "Клавішний інструмент Casio CT-S200",
+        "price": "₴5 500",
+        "image": "/res/img/muz001.png",
+        "tags": ["Лідер продаж", "Новинка"],
+        "sku": "MUZ-004"
+    },
+    {
+        "id": "5",
+        "name": "Ударна установка Roland TD-1K",
+        "price": "₴30 000",
+        "image": "/res/img/muz001.png",
+        "tags": ["Лідер продаж"],
+        "sku": "MUZ-005"
+    },
+    {
+        "id": "6",
+        "name": "Електрогітара Fender Stratocaster",
+        "price": "₴18 500",
+        "image": "/res/img/muz001.png",
+        "tags": ["Лідер продаж", "Новинка"],
+        "sku": "MUZ-006"
+    },
+    {
+        "id": "7",
+        "name": "Акустична гітара Yamaha F310",
+        "price": "₴7 200",
+        "image": "/res/img/muz001.png",
+        "tags": ["Лідер продаж"],
+        "sku": "MUZ-007"
+    },
+    {
+        "id": "8",
+        "name": "Саксофон Yamaha YAS-280",
+        "price": "₴25 000",
+        "image": "/res/img/muz001.png",
+        "tags": ["Новинка"],
+        "sku": "MUZ-008"
+    },
+    {
+        "id": "9",
+        "name": "Клавішний інструмент Casio CT-S200",
+        "price": "₴5 500",
+        "image": "/res/img/muz001.png",
+        "tags": ["Лідер продаж", "Новинка"],
+        "sku": "MUZ-009"
+    },
+    {
+        "id": "10",
+        "name": "Ударна установка Roland TD-1K",
+        "price": "₴30 000",
+        "image": "/res/img/muz001.png",
+        "tags": ["Лідер продаж"],
+        "sku": "MUZ-010"
+    }
+]

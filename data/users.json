@@ -1,0 +1,89 @@
+[
+  {
+    "username": "user1",
+    "password": "password1",
+    "cart": [],
+    "favorites": [],
+    "orderHistory": []
+  },
+  {
+    "username": "user2",
+    "password": "password2",
+    "cart": [],
+    "favorites": [],
+    "orderHistory": []
+  },
+  {
+    "username": "1",
+    "password": "1",
+    "cart": [
+      {
+        "id": "2",
+        "quantity": 5
+      }
+    ],
+    "favorites": [
+      "2"
+    ],
+    "orderHistory": [
+      {
+        "fullName": "2",
+        "phone": "2",
+        "address": "2",
+        "items": [
+          {
+            "id": "3",
+            "quantity": 4
+          },
+          {
+            "id": "2",
+            "quantity": 1
+          }
+        ],
+        "date": "2025-04-07T18:36:36.543Z"
+      },
+      {
+        "fullName": "1",
+        "phone": "2",
+        "address": "4",
+        "items": [
+          {
+            "id": "3",
+            "quantity": 4
+          },
+          {
+            "id": "2",
+            "quantity": 1
+          }
+        ],
+        "date": "2025-04-07T20:46:59.802Z"
+      }
+    ]
+  },
+  {
+    "username": "2",
+    "password": "2",
+    "cart": [],
+    "favorites": [
+      "2"
+    ],
+    "orderHistory": [
+      {
+        "fullName": "1",
+        "phone": "1",
+        "address": "1",
+        "items": [
+          {
+            "id": "3",
+            "quantity": 1
+          },
+          {
+            "id": "2",
+            "quantity": 2
+          }
+        ],
+        "date": "2025-04-06T21:56:47.225Z"
+      }
+    ]
+  }
+]

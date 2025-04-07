@@ -11,7 +11,7 @@
 }
 .footer .footer_company_container .logo {
     grid-row: 1;
-    background-image: url("/LR3-4/res/logo.png");
+    background-image: url("/res/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

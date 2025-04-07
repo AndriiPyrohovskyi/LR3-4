@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизація</title>
+    <script src="/scripts/loadStyles.js"></script>
+    <link rel="stylesheet" href="/CSS/auth.css">
+</head>
+
+<body>
+    <div class="header"></div>
+    <div class="content">
+        <div class="auth-container">
+            <h1>Авторизація</h1>
+            <div class="auth-forms">
+                <form id="login-form" class="auth-form">
+                    <h2>Увійти</h2>
+                    <input type="username" placeholder="username" required>
+                    <input type="password" placeholder="password" required>
+                    <button type="submit">Увійти</button>
+                </form>
+
+                <form id="register-form" class="auth-form">
+                    <h2>Зареєструватись</h2>
+                    <input type="username" placeholder="username" required>
+                    <input type="password" placeholder="password" required>
+                    <input type="password" placeholder="confirm password" required>
+                    <button type="submit">Зареєструватись</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+    <script src="scripts/loadComponents.js"></script>
+    <script src="/scripts/auth.js"></script>
+</body>
+
+</html>

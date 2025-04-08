@@ -19,14 +19,27 @@ document.addEventListener('DOMContentLoaded', () => {
                         <button class="user-name">${currentUser.username}</button>
                         <div class="dropdown-menu">
                             <button id="order-history-btn">Переглянути історію замовлень</button>
+                            ${
+                                currentUser.rights === 'admin'
+                                    ? '<button id="admin-panel-btn">Переглянути адмін панель</button>'
+                                    : ''
+                            }
                             <button id="logout-btn">Вийти</button>
                         </div>
                     </div>
                 `;
+
                 const orderHistoryButton = document.querySelector('#order-history-btn');
                 orderHistoryButton.addEventListener('click', () => {
                     window.location.href = '/pages/other/orderhistory.html';
                 });
+
+                if (currentUser.rights === 'admin') {
+                    const adminPanelButton = document.querySelector('#admin-panel-btn');
+                    adminPanelButton.addEventListener('click', () => {
+                        window.location.href = '/pages/other/adminPanel.html';
+                    });
+                }
 
                 const logoutButton = document.querySelector('#logout-btn');
                 logoutButton.addEventListener('click', () => {

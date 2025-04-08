@@ -2,6 +2,7 @@
   {
     "username": "user1",
     "password": "password1",
+    "rights": "admin",
     "cart": [],
     "favorites": [],
     "orderHistory": []
@@ -9,6 +10,7 @@
   {
     "username": "user2",
     "password": "password2",
+    "rights": "user",
     "cart": [],
     "favorites": [],
     "orderHistory": []
@@ -16,16 +18,8 @@
   {
     "username": "1",
     "password": "1",
-    "cart": [
-      {
-        "id": "2",
-        "quantity": 5
-      },
-      {
-        "id": "10",
-        "quantity": 1
-      }
-    ],
+    "rights": "admin",
+    "cart": [],
     "favorites": [
       "2"
     ],
@@ -61,12 +55,77 @@
           }
         ],
         "date": "2025-04-07T20:46:59.802Z"
+      },
+      {
+        "fullName": "2",
+        "phone": "2",
+        "address": "2",
+        "items": [
+          {
+            "id": "2",
+            "quantity": 5
+          },
+          {
+            "id": "10",
+            "quantity": 1
+          }
+        ],
+        "date": "2025-04-08T06:05:41.136Z"
+      },
+      {
+        "fullName": "9",
+        "phone": "9",
+        "address": "9",
+        "items": [
+          {
+            "id": "2",
+            "quantity": 5
+          },
+          {
+            "id": "10",
+            "quantity": 1
+          }
+        ],
+        "date": "2025-04-08T06:07:01.390Z"
+      },
+      {
+        "fullName": "10",
+        "phone": "10",
+        "address": "10",
+        "items": [
+          {
+            "id": "2",
+            "quantity": 5
+          },
+          {
+            "id": "10",
+            "quantity": 1
+          }
+        ],
+        "date": "2025-04-08T06:07:58.276Z"
+      },
+      {
+        "fullName": "aaa",
+        "phone": "aaa",
+        "address": "aaa",
+        "items": [
+          {
+            "id": "4",
+            "quantity": 10
+          },
+          {
+            "id": "9",
+            "quantity": 7
+          }
+        ],
+        "date": "2025-04-08T06:13:38.908Z"
       }
     ]
   },
   {
     "username": "2",
     "password": "2",
+    "rights": "user",
     "cart": [],
     "favorites": [
       "2"
@@ -87,6 +146,29 @@
           }
         ],
         "date": "2025-04-06T21:56:47.225Z"
+      }
+    ]
+  },
+  {
+    "username": "5",
+    "password": "7",
+    "rights": "user",
+    "cart": [
+      {
+        "id": "4",
+        "quantity": 8
+      }
+    ],
+    "favorites": [
+      "3"
+    ],
+    "orderHistory": [
+      {
+        "fullName": "Золочевський Іван Батькович",
+        "phone": "+380983741340",
+        "address": "вул. Пушкіна, дом Колотушкіна",
+        "items": [],
+        "date": "2025-04-08T04:38:22.979Z"
       }
     ]
   }

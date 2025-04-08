@@ -6,6 +6,7 @@ const app = express();
 const PORT = 8000;
 
 const usersFilePath = path.join(__dirname, 'data', 'users.json');
+const productsFilePath = path.join(__dirname, 'data', 'products.json');
 
 app.use(express.json());
 app.use('/data', express.static(path.join(__dirname, 'data')));
@@ -281,8 +282,6 @@ app.delete('/api/users/:username/favorites/:productId', (req, res) => {
         if (!user) {
             return res.status(404).json({ error: 'Користувача не знайдено' });
         }
-
-        // Видаляємо товар з улюбленого
         const initialFavoritesLength = user.favorites.length;
         user.favorites = user.favorites.filter((id) => id !== productId);
 
@@ -299,7 +298,58 @@ app.delete('/api/users/:username/favorites/:productId', (req, res) => {
     });
 });
 
-// Запуск сервера
+// Отримати всі товари
+app.get('/api/products', (req, res) => {
+    fs.readFile(productsFilePath, 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).json({ error: 'Не вдалося прочитати файл' });
+        }
+        res.json(JSON.parse(data));
+    });
+});
+
+app.post('/api/products', (req, res) => {
+    const newProduct = req.body;
+
+    fs.readFile(productsFilePath, 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).json({ error: 'Не вдалося прочитати файл' });
+        }
+
+        const products = JSON.parse(data);
+        newProduct.id = String(products.length + 1);
+        products.push(newProduct);
+
+        fs.writeFile(productsFilePath, JSON.stringify(products, null, 2), (err) => {
+            if (err) {
+                return res.status(500).json({ error: 'Не вдалося записати файл' });
+            }
+            res.status(201).json(newProduct);
+        });
+    });
+});
+
+// Видалити товар
+app.delete('/api/products/:id', (req, res) => {
+    const { id } = req.params;
+
+    fs.readFile(productsFilePath, 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).json({ error: 'Не вдалося прочитати файл' });
+        }
+
+        const products = JSON.parse(data);
+        const updatedProducts = products.filter((product) => product.id !== id);
+
+        fs.writeFile(productsFilePath, JSON.stringify(updatedProducts, null, 2), (err) => {
+            if (err) {
+                return res.status(500).json({ error: 'Не вдалося записати файл' });
+            }
+            res.status(200).json({ message: 'Товар видалено' });
+        });
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Сервер запущено на http://localhost:${PORT}`);
 });

@@ -9,8 +9,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 200px); /* Висота сторінки мінус висота хедера і футера */
-    padding: 20px; /* Відступи для мобільних пристроїв */
+    min-height: calc(100vh - 200px);
+    padding: 20px;
 }
 
 .auth-container {

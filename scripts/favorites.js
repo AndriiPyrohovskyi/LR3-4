@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const favoritesContainer = document.querySelector('#favorites');
 
     try {
-        // Отримуємо дані користувача
         const userResponse = await fetch(`/api/users/${currentUser.username}`);
         if (!userResponse.ok) {
             throw new Error('Не вдалося отримати дані користувача');
@@ -20,18 +19,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             favoritesContainer.innerHTML = '<p>У вас немає улюблених товарів.</p>';
             return;
         }
-
-        // Отримуємо дані про всі товари
         const productsResponse = await fetch('/data/products.json');
         if (!productsResponse.ok) {
             throw new Error('Не вдалося отримати дані про товари');
         }
         const products = await productsResponse.json();
-
-        // Фільтруємо товари за ID, які є в улюблених користувача
         const favoriteProducts = products.filter((product) => user.favorites.includes(product.id));
-
-        // Відображаємо товари
         favoriteProducts.forEach((product) => {
             const productElement = document.createElement('div');
             productElement.classList.add('product-item');
@@ -47,8 +40,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             `;
             favoritesContainer.appendChild(productElement);
         });
-
-        // Обробка кнопок
         favoritesContainer.addEventListener('click', async (event) => {
             const productId = event.target.dataset.productId;
 
@@ -93,17 +84,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         
             try {
-                // Надсилаємо запит на сервер для видалення товару з улюбленого
                 const response = await fetch(`/api/users/${currentUser.username}/favorites/${productId}`, {
                     method: 'DELETE',
                 });
         
                 if (response.ok) {
-                    // Оновлюємо локальні дані
                     currentUser.favorites = currentUser.favorites.filter((id) => id !== productId);
                     saveCurrentUser(currentUser);
-        
-                    // Видаляємо товар з інтерфейсу
                     const productElement = document.querySelector(`[data-product-id="${productId}"]`).closest('.product-item');
                     if (productElement) {
                         productElement.remove();
@@ -130,5 +117,5 @@ function getCurrentUser() {
 }
 
 function saveCurrentUser(user) {
-    sessionStorage.setItem('currentUser', JSON.stringify(user)); // Зберігаємо користувача в sessionStorage
+    sessionStorage.setItem('currentUser', JSON.stringify(user));
 }

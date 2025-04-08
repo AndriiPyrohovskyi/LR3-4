@@ -1,122 +1,166 @@
 [
-    {
-        "id": "1",
-        "name": "Електрогітара Fender Stratocaster",
-        "price": "₴18 500",
-        "image": "https://muztorg.ua/image/cache/catalog/99995/236019/236019_fender_american_pro_ii_strat_anniversary_2ts_1-1200x800.jpg",
-        "tags": ["Лідер продаж", "Новинка"],
-        "sku": "MUZ-001"
-    },
-    {
-        "id": "2",
-        "name": "Акустична гітара Yamaha F310",
-        "price": "₴7 200",
-        "image": "https://muztorg.ua/image/cache/catalog/99995/208360/208360_1-1200x800.jpg",
-        "tags": ["Лідер продаж"],
-        "sku": "MUZ-002"
-    },
-    {
-        "id": "3",
-        "name": "Саксофон Yamaha YAS-280",
-        "price": "₴25 000",
-        "image": "https://hitonline.ua/icache/bigproduct_10401.jpg",
-        "tags": ["Новинка"],
-        "sku": "MUZ-003"
-    },
-    {
-        "id": "4",
-        "name": "Клавішний інструмент Casio CT-S200",
-        "price": "₴5 500",
-        "image": "https://acropolis.ua/include/images/detail-more/52841/662bae8f39059.jpg",
-        "tags": ["Лідер продаж", "Новинка"],
-        "sku": "MUZ-004"
-    },
-    {
-        "id": "5",
-        "name": "Ударна установка Roland TD-1K",
-        "price": "₴30 000",
-        "image": "https://www.tvoyzvuk.by/images/detailed/7/10028_tz.jpg",
-        "tags": ["Лідер продаж"],
-        "sku": "MUZ-005"
-    },
-    {
-        "id": "6",
-        "name": "Бас-гітара Ibanez SR300E",
-        "price": "₴12 000",
-        "image": "https://lanota.com.ua/content/images/3/480x480l50nn0/60197069836255.jpeg",
-        "tags": ["Лідер продаж", "Новинка"],
-        "sku": "MUZ-006"
-    },
-    {
-        "id": "7",
-        "name": "Мікрофон Shure SM58",
-        "price": "₴3 500",
-        "image": "https://monkeymusic.ua/image/cache/catalog/pimcore/shure-sm58-lc-550x550.jpg",
-        "tags": ["Лідер продаж"],
-        "sku": "MUZ-007"
-    },
-    {
-        "id": "8",
-        "name": "Педаль ефектів Boss DS-1",
-        "price": "₴2 000",
-        "image": "https://prodj.ua/image/cache/catalog/img1b/2016/09/20160918115321-920x920.webp",
-        "tags": ["Лідер продаж", "Новинка"],
-        "sku": "MUZ-008"
-    },
-    {
-        "id": "9",
-        "name": "Синтезатор Korg Minilogue XD",
-        "price": "₴20 000",
-        "image": "https://prodj.ua/image/cache/catalog/img2b/2019/10/20191009171150-757x757.webp",
-        "tags": ["Лідер продаж"],
-        "sku": "MUZ-009"
-    },
-    {
-        "id": "10",
-        "name": "Гітара PRS SE Custom 24",
-        "price": "₴15 000",
-        "image": "https://guitarhouse.com.ua/content/images/13/1280x1280l80mc0/elektrogitara-prs-se-custom-24-8-eriza-verde-80017520320234.jpg",
-        "tags": ["Лідер продаж", "Новинка"],
-        "sku": "MUZ-010"
-    },
-    {
-        "id": "11",
-        "name": "Музичний центр Sony GTK-XB90",
-        "price": "₴12 500",
-        "image": "https://content2.rozetka.com.ua/goods/images/big/55161432.jpg",
-        "tags": ["Лідер продаж"],
-        "sku": "MUZ-011"
-    },
-    {
-        "id": "12",
-        "name": "Аудіоінтерфейс Focusrite Scarlett 2i2",
-        "price": "₴6 500",
-        "image": "https://muztorg.ua/image/cache/catalog/99995/234620/234620_focusrite_scarlett_gen4_2i2_studio_1-1200x800.jpg",
-        "tags": ["Лідер продаж", "Новинка"],
-        "sku": "MUZ-012"
-    },
-    {
-        "id": "13",
-        "name": "Мікшерний пульт Behringer XENYX Q802USB",
-        "price": "₴4 500",
-        "image": "https://plastinka.in.ua/65067/mikshernij-pult-behringer-xenyx-q802-usb.jpg",
-        "tags": ["Лідер продаж"],
-        "sku": "MUZ-013"
-    },
-    {
-        "id": "14",
-        "name": "Гарнітура Sennheiser HD 280 Pro",
-        "price": "₴3 000",
-        "image": "https://prodj.ua/image/cache/catalog/img1b/2020/01/20200113102706-920x920.webp",
-        "tags": ["Лідер продаж", "Новинка"],
-        "sku": "MUZ-014"
-    },
-    {
-        "id": "15",
-        "name": "Портативна колонка JBL Flip 5",
-        "price": "₴4 000",
-        "image": "https://yabloki.ua/media/cache/sylius_shop_product_original/75/61/portativnaja-akustika-jbl-flip-5-blue-2.png.webp",
-        "tags": ["Лідер продаж"],
-        "sku": "MUZ-015"
-    }
+  {
+    "id": "1",
+    "name": "Електрогітара Fender Stratocaster",
+    "price": "₴18 500",
+    "image": "https://muztorg.ua/image/cache/catalog/99995/236019/236019_fender_american_pro_ii_strat_anniversary_2ts_1-1200x800.jpg",
+    "tags": [
+      "Лідер продаж",
+      "Новинка"
+    ],
+    "sku": "MUZ-001"
+  },
+  {
+    "id": "2",
+    "name": "Акустична гітара Yamaha F310",
+    "price": "₴7 200",
+    "image": "https://muztorg.ua/image/cache/catalog/99995/208360/208360_1-1200x800.jpg",
+    "tags": [
+      "Лідер продаж"
+    ],
+    "sku": "MUZ-002"
+  },
+  {
+    "id": "3",
+    "name": "Саксофон Yamaha YAS-280",
+    "price": "₴25 000",
+    "image": "https://hitonline.ua/icache/bigproduct_10401.jpg",
+    "tags": [
+      "Новинка"
+    ],
+    "sku": "MUZ-003"
+  },
+  {
+    "id": "4",
+    "name": "Клавішний інструмент Casio CT-S200",
+    "price": "₴5 500",
+    "image": "https://acropolis.ua/include/images/detail-more/52841/662bae8f39059.jpg",
+    "tags": [
+      "Лідер продаж",
+      "Новинка"
+    ],
+    "sku": "MUZ-004"
+  },
+  {
+    "id": "5",
+    "name": "Ударна установка Roland TD-1K",
+    "price": "₴30 000",
+    "image": "https://www.tvoyzvuk.by/images/detailed/7/10028_tz.jpg",
+    "tags": [
+      "Лідер продаж"
+    ],
+    "sku": "MUZ-005"
+  },
+  {
+    "id": "6",
+    "name": "Бас-гітара Ibanez SR300E",
+    "price": "₴12 000",
+    "image": "https://lanota.com.ua/content/images/3/480x480l50nn0/60197069836255.jpeg",
+    "tags": [
+      "Лідер продаж",
+      "Новинка"
+    ],
+    "sku": "MUZ-006"
+  },
+  {
+    "id": "7",
+    "name": "Мікрофон Shure SM58",
+    "price": "₴3 500",
+    "image": "https://monkeymusic.ua/image/cache/catalog/pimcore/shure-sm58-lc-550x550.jpg",
+    "tags": [
+      "Лідер продаж"
+    ],
+    "sku": "MUZ-007"
+  },
+  {
+    "id": "8",
+    "name": "Педаль ефектів Boss DS-1",
+    "price": "₴2 000",
+    "image": "https://prodj.ua/image/cache/catalog/img1b/2016/09/20160918115321-920x920.webp",
+    "tags": [
+      "Лідер продаж",
+      "Новинка"
+    ],
+    "sku": "MUZ-008"
+  },
+  {
+    "id": "9",
+    "name": "Синтезатор Korg Minilogue XD",
+    "price": "₴20 000",
+    "image": "https://prodj.ua/image/cache/catalog/img2b/2019/10/20191009171150-757x757.webp",
+    "tags": [
+      "Лідер продаж"
+    ],
+    "sku": "MUZ-009"
+  },
+  {
+    "id": "10",
+    "name": "Гітара PRS SE Custom 24",
+    "price": "₴15 000",
+    "image": "https://guitarhouse.com.ua/content/images/13/1280x1280l80mc0/elektrogitara-prs-se-custom-24-8-eriza-verde-80017520320234.jpg",
+    "tags": [
+      "Лідер продаж",
+      "Новинка"
+    ],
+    "sku": "MUZ-010"
+  },
+  {
+    "id": "11",
+    "name": "Музичний центр Sony GTK-XB90",
+    "price": "₴12 500",
+    "image": "https://content2.rozetka.com.ua/goods/images/big/55161432.jpg",
+    "tags": [
+      "Лідер продаж"
+    ],
+    "sku": "MUZ-011"
+  },
+  {
+    "id": "12",
+    "name": "Аудіоінтерфейс Focusrite Scarlett 2i2",
+    "price": "₴6 500",
+    "image": "https://muztorg.ua/image/cache/catalog/99995/234620/234620_focusrite_scarlett_gen4_2i2_studio_1-1200x800.jpg",
+    "tags": [
+      "Лідер продаж",
+      "Новинка"
+    ],
+    "sku": "MUZ-012"
+  },
+  {
+    "id": "13",
+    "name": "Мікшерний пульт Behringer XENYX Q802USB",
+    "price": "₴4 500",
+    "image": "https://plastinka.in.ua/65067/mikshernij-pult-behringer-xenyx-q802-usb.jpg",
+    "tags": [
+      "Лідер продаж"
+    ],
+    "sku": "MUZ-013"
+  },
+  {
+    "id": "14",
+    "name": "Гарнітура Sennheiser HD 280 Pro",
+    "price": "₴3 000",
+    "image": "https://prodj.ua/image/cache/catalog/img1b/2020/01/20200113102706-920x920.webp",
+    "tags": [
+      "Лідер продаж",
+      "Новинка"
+    ],
+    "sku": "MUZ-014"
+  },
+  {
+    "id": "15",
+    "name": "Портативна колонка JBL Flip 5",
+    "price": "₴4 000",
+    "image": "https://yabloki.ua/media/cache/sylius_shop_product_original/75/61/portativnaja-akustika-jbl-flip-5-blue-2.png.webp",
+    "tags": [
+      "Лідер продаж"
+    ],
+    "sku": "MUZ-015"
+  },
+  {
+    "name": "Скібіді туалет",
+    "sku": "21344235",
+    "price": "19332334",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Skibidi_Toilet.svg/1200px-Skibidi_Toilet.svg.png",
+    "id": "17"
+  }
 ]

@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Реєстрація
     const registerForm = document.querySelector('#register-form');
     if (registerForm) {
         registerForm.addEventListener('submit', async (event) => {
@@ -35,8 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.error('Форма реєстрації не знайдена!');
     }
-
-    // Логін
     const loginForm = document.querySelector('#login-form');
     if (loginForm) {
         loginForm.addEventListener('submit', async (event) => {

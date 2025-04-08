@@ -7,30 +7,28 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     const cartContainer = document.querySelector('#cart');
+    let user;
 
     try {
-        // Завантажуємо дані користувача
         const userResponse = await fetch(`/api/users/${currentUser.username}`);
         if (!userResponse.ok) {
             throw new Error('Не вдалося отримати дані користувача');
         }
-        const user = await userResponse.json();
+        user = await userResponse.json();
 
         if (!user.cart || user.cart.length === 0) {
             cartContainer.innerHTML = '<p>Ваш кошик порожній.</p>';
             return;
         }
 
-        // Завантажуємо дані про товари
         const productsResponse = await fetch('/data/products.json');
         if (!productsResponse.ok) {
             throw new Error('Не вдалося отримати дані про товари');
         }
         const products = await productsResponse.json();
 
-        // Фільтруємо товари за ID, які є в кошику користувача
         const cartProducts = user.cart
-            .filter((cartItem) => cartItem && cartItem.id && cartItem.quantity) // Перевірка структури
+            .filter((cartItem) => cartItem && cartItem.id && cartItem.quantity)
             .map((cartItem) => {
                 const product = products.find((p) => p.id === cartItem.id);
                 if (!product) {
@@ -39,9 +37,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
                 return { ...product, quantity: cartItem.quantity };
             })
-            .filter(Boolean); // Видаляємо null значення
+            .filter(Boolean);
 
-        // Відображаємо товари
         cartProducts.forEach((product) => {
             const productElement = document.createElement('div');
             productElement.classList.add('product-item');
@@ -60,7 +57,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             cartContainer.appendChild(productElement);
         });
 
-        // Обробка кнопок
         cartContainer.addEventListener('click', async (event) => {
             const productId = event.target.dataset.productId;
 
@@ -82,7 +78,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 });
 
                 if (response.ok) {
-                    location.reload(); // Перезавантажуємо сторінку для оновлення кошика
+                    location.reload();
                 } else {
                     throw new Error('Не вдалося оновити кількість товару');
                 }
@@ -91,25 +87,25 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         }
 
-async function removeFromCart(productId) {
-    try {
-        const response = await fetch(`/api/users/${currentUser.username}/cart/${productId}`, {
-            method: 'DELETE',
-            headers: { 'Content-Type': 'application/json' }
-        });
+        async function removeFromCart(productId) {
+            try {
+                const response = await fetch(`/api/users/${currentUser.username}/cart/${productId}`, {
+                    method: 'DELETE',
+                    headers: { 'Content-Type': 'application/json' }
+                });
 
-        if (response.ok) {
-            alert('Товар видалено з кошика!');
-            location.reload(); // Перезавантажуємо сторінку для оновлення кошика
-        } else {
-            const error = await response.json();
-            console.error('Помилка при видаленні товару з кошика:', error.error);
-            alert('Не вдалося видалити товар з кошика.');
+                if (response.ok) {
+                    alert('Товар видалено з кошика!');
+                    location.reload();
+                } else {
+                    const error = await response.json();
+                    console.error('Помилка при видаленні товару з кошика:', error.error);
+                    alert('Не вдалося видалити товар з кошика.');
+                }
+            } catch (err) {
+                console.error('Помилка при видаленні товару з кошика:', err);
+            }
         }
-    } catch (err) {
-        console.error('Помилка при видаленні товару з кошика:', err);
-    }
-}
     } catch (err) {
         console.error('Помилка при завантаженні кошика:', err);
         cartContainer.innerHTML = '<p>Не вдалося завантажити кошик.</p>';
@@ -117,7 +113,6 @@ async function removeFromCart(productId) {
 
     const orderForm = document.querySelector('#order-form');
 
-    // Обробка форми замовлення
     orderForm.addEventListener('submit', async (event) => {
         event.preventDefault();
 
@@ -129,7 +124,7 @@ async function removeFromCart(productId) {
             fullName,
             phone,
             address,
-            items: currentUser.cart,
+            items: user.cart,
             date: new Date().toISOString(),
         };
 

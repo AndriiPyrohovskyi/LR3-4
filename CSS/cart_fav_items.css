@@ -1,100 +1,174 @@
+/* Стильний дизайн продуктового елемента */
 .product-item {
-    display: flex;
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
     align-items: center;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ffffff, #f7f9fc);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .product-image {
     width: 100px;
     height: 100px;
     object-fit: cover;
-    margin-right: 20px;
+    border-radius: 10px;
+    border: 2px solid #80d8ff;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .product-details h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 600;
     color: #333;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .product-details p {
-    margin: 5px 0;
-    color: #666;
+    margin: 0;
+    font-size: 15px;
+    color: #555;
+    font-family: 'Montserrat', sans-serif;
 }
 
+/* Стиль для форми замовлення */
 form#order-form {
-    margin-top: 20px;
+    margin: 30px auto;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    max-width: 400px;
+    padding: 20px;
+    background: #f7f9fc;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 form#order-form label {
-    display: flex;
-    flex-direction: column;
     font-size: 14px;
-    color: #333;
+    color: #444;
+    font-family: 'Montserrat', sans-serif;
 }
 
 form#order-form input {
-    padding: 8px;
+    padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: 'Montserrat', sans-serif;
 }
 
-form#order-form button {
-    padding: 10px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
+form#order-form input:focus {
+    border-color: #3f51b5;
+}
+
+form#order-form button,
+.add-to-cart-btn,
+.remove-btn {
+    min-width: 120px;
+    max-width: 220px;
+    padding: 10px 15px;
+    font-size: 15px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
+    background: #3f51b5;
+    color: #fff;
+    transition: transform 0.2s, background-color 0.2s;
+    font-family: 'Montserrat', sans-serif;
 }
 
-form#order-form button:hover {
-    background-color: #0056b3;
+form#order-form button:hover,
+.add-to-cart-btn:hover,
+.remove-btn:hover {
+    background: #303f9f;
+    transform: scale(1.05);
 }
 
 .quantity-controls {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
+    flex-direction: row;
+    gap: 8px;
 }
 
 .quantity-controls button {
-    padding: 5px 10px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
+    padding: 6px;
+    font-size: 13px;
+    background: #e1f5fe;
+    color: #0288d1;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.3s;
+    width: 40px;
+    height: 35px;
 }
 
 .quantity-controls button:hover {
-    background-color: #0056b3;
+    background: #b3e5fc;
+    transform: scale(1.1);
 }
 
-.remove-btn,
-.add-to-cart-btn {
-    margin-top: 10px;
-    padding: 8px 12px;
-    font-size: 14px;
-    background-color: #dc3545;
-    color: #fff;
+.quantity {
+    font-size: 15px;
+    font-weight: bold;
+    color: #0288d1;
+    text-align: center;
+}
+
+.increase-btn {
+    background-color: #e8f5e9;
+    color: #388e3c;
     border: none;
-    border-radius: 4px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
 }
 
-.remove-btn:hover,
-.add-to-cart-btn:hover {
-    background-color: #c82333;
+.increase-btn:hover {
+    background-color: #c8e6c9;
+    transform: scale(1.1);
+}
+
+.decrease-btn {
+    background-color: #ffebee;
+    color: #d32f2f;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.decrease-btn:hover {
+    background-color: #ffcdd2;
+    transform: scale(1.1);
 }

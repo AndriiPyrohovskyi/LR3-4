@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const orderHistoryContainer = document.querySelector('#order-history-container');
 
     try {
-        // Отримуємо дані користувача
         const userResponse = await fetch(`/api/users/${currentUser.username}`);
         if (!userResponse.ok) {
             throw new Error('Не вдалося отримати дані користувача');
@@ -20,8 +19,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             orderHistoryContainer.innerHTML = '<p>У вас немає замовлень.</p>';
             return;
         }
-
-        // Відображаємо історію замовлень
         orderHistoryContainer.innerHTML = '';
         user.orderHistory.forEach((order) => {
             const orderElement = document.createElement('div');

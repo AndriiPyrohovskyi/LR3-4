@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адмін панель</title>
+    <script src="/scripts/loadStyles.js"></script>
+    <link rel="stylesheet" href="/CSS/adminpanel.css">
+</head>
+
+<body>
+    <div class="header"></div>
+    <div class="content">
+        <h1>Адмін панель</h1>
+        <div class="product-management">
+            <h2>Управління товарами</h2>
+            <form id="add-product-form">
+                <input type="text" id="product-name" placeholder="Назва товару" required>
+                <input type="text" id="product-sku" placeholder="Артикул" required>
+                <input type="number" id="product-price" placeholder="Ціна" required>
+                <input type="text" id="product-image" placeholder="URL зображення" required>
+                <button type="submit">Додати товар</button>
+            </form>
+            <div id="product-list"></div>
+        </div>
+    </div>
+    <div class="footer"></div>
+    <script src="/scripts/loadComponents.js"></script>
+    <script src="/scripts/adminpanel.js"></script>
+</body>
+
+</html>
